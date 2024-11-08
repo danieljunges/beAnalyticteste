@@ -26,6 +26,18 @@ A API do SteamDB fornece dados detalhados sobre jogos da Steam, como preços, hi
    - Lista de todos os jogos disponíveis
    - Atualizações e alterações do jogo
    - Recompensas (quais jogos oferecem recompensas aos usuários)
+  
+### Informações de cada DataFrame
+  
+**df_categorias:** Contém informações sobre categorias de jogos da Steam. Ele é populado a partir da API da Steam, especificamente de um endpoint próprio para obter as categorias mais populares de jogos.
+
+**df_multiplayer:** É uma filtragem de df_categorias, contendo apenas categorias que incluem o termo "Multi" no nome. Isso faz com que ele agrupe categorias relacionadas a modos multiplayer, para facilitar o tratamento específico desses tipos de jogos.
+
+**df_jogos:** Armazena uma lista de jogos, incluindo colunas como idJogo (ID do jogo), Jogo (nome do jogo), DataUltimaModificacao (data da última modificação, convertida para timestamp), e numeroAlteracoesPreco (número de vezes que o preço foi alterado). Algumas colunas foram adicionadas no processo de tratamento para garantir mais insights sobre aquele dado.
+
+**jogos_recentes e jogos_antigos:** Neste DataFrame, temos os jogos separados de acordo com época. O DataFrame 'jogos recentes' mostra os jogos lançados no último mês, enquanto o 'jogos antigos' representa os jogos disponibilizados no último ano. 
+
+**df_recompensas:** Contém informações sobre recompensas associadas aos jogos, como bônus ou conquistas.
      
 3. Organiza e exporta os dados em um formato CSV.
 

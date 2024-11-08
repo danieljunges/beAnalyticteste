@@ -37,7 +37,7 @@ A API do SteamDB fornece dados detalhados sobre jogos da Steam, como preços, hi
 
 **df_jogos:** Armazena uma lista de jogos, incluindo colunas como idJogo (ID do jogo), Jogo (nome do jogo), DataUltimaModificacao (data da última modificação, convertida para timestamp), e numeroAlteracoesPreco (número de vezes que o preço foi alterado). Algumas colunas foram adicionadas no processo de tratamento para garantir mais insights sobre aquele dado.
 
-**jogos_recentes e jogos_antigos:** Neste DataFrame, temos os jogos separados de acordo com época. O DataFrame 'jogos_recentes' mostra os jogos lançados no último mês, enquanto o 'jogos_antigos' representa os jogos disponibilizados no último ano. 
+**jogos_recentes e jogos_antigos:** Neste DataFrame, temos os jogos separados de acordo com época. O DataFrame 'jogos_recentes' mostra os jogos lançados no último mês, enquanto o 'jogos_antigos' representa os jogos disponibilizados após 365 dias. 
 
 **df_recompensas:** Contém informações sobre recompensas associadas aos jogos, como bônus ou conquistas.
 
